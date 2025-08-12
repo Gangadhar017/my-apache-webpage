@@ -1,20 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>My Apache Web Page</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            max-width: 500px;
+            text-align: center;
+        }
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        img {
+            width: 150px;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+        }
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.8rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #357ABD;
+        }
+        #message {
+            margin-top: 1.2rem;
+            font-weight: 600;
+            color: #4a90e2;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to My Apache Website</h1>
         <p>Je m’appelle Om Singh et je poursuis actuellement un Bachelor of Technology (B.Tech) à l’Université GLA.
             Je m’intéresse particulièrement à la technologie et à la résolution de problèmes.</p>
-        <img src="images/logo.png" alt="Logo" width="200">
+        <img src="images/logo.png" alt="Logo" />
         <button onclick="showMessage()">Click Me</button>
         <p id="message"></p>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function showMessage() {
+            const msg = document.getElementById('message');
+            msg.textContent = 'Merci d’avoir cliqué! Bienvenue sur mon site.';
+        }
+    </script>
 </body>
 </html>
